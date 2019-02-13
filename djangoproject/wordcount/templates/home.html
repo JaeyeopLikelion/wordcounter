@@ -1,0 +1,11 @@
+<h1>안녕하세요, 여기서 글자수를 세세요!</h1>
+
+<a href="{% url 'about' %}">ABOUT</a>
+
+<form action="{%url 'result' %}" method = "POST">
+    {% csrf_token %}
+    <textarea name="fulltext" cols="40" rows="10"></textarea>
+    <br>
+    공백 포함<input type="checkbox" name="choice">
+    <input type="submit" value="Count">
+</form>
